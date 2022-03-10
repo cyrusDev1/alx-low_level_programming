@@ -1,4 +1,4 @@
-![](https://media.istockphoto.com/vectors/hello-world-vector-id485999612?s=612x612)
+![](https://www.docstring.fr/media/blog_posts/python-origine-hello-world/thumbnail/python-origine-hello-world.jpg)
 
 Resources
 ---------
@@ -7,7 +7,7 @@ Resources
 
 -   [Everything you need to know to start with C.pdf](https://alx-intranet.hbtn.io/rltoken/Mt-kMhgTyVzA2i5SYsWBwQ "Everything you need to know to start with C.pdf")
 -   [Dennis Ritchie](https://alx-intranet.hbtn.io/rltoken/YWFrRob_-Yo-_NQikMLI-g "Dennis Ritchie")
--   ["C" Programming Language: Brian Kernighan](https://alx-intranet.hbtn.io/rltoken/W4oygfMgAp5Hyc7o6QuSYQ ""C" Programming Language: Brian Kernighan")
+-   ["C" Programming Language: Brian Kernighan](https://alx-intranet.hbtn.io/rltoken/W4oygfMgAp5Hyc7o6QuSYQ "C Programming Language: Brian Kernighan")
 -   [Why C Programming Is Awesome](https://alx-intranet.hbtn.io/rltoken/WYdE1novaWa0yt5fzGvLBw "Why C Programming Is Awesome")
 -   [Learning to program in C part 1](https://alx-intranet.hbtn.io/rltoken/aE_pZLbexuLroHA0FmjLbw "Learning to program in C part 1")
 -   [Learning to program in C part 2](https://alx-intranet.hbtn.io/rltoken/3a5y1N-0FlTaPbKRxlRLlQ "Learning to program in C part 2")
