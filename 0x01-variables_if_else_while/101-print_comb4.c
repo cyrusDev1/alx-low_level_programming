@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * main - Entry point 
+ * main - Entry point
  *
  * Return: return 0
  *
@@ -30,5 +30,5 @@ int main(void)
 		}
 	}
 	putchar(10);
-	return (10);
+	return (0);
 }
