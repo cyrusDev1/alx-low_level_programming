@@ -5,7 +5,7 @@
 /**
  * main - Entry point
  *
- * Return: This program displays if the number is negative, positive or even zero 
+ * Return: returns 0 when everything's aliright
  *
  */
 
