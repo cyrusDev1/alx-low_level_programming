@@ -1,7 +1,7 @@
 0x01. C - Variables, if, else, while
 ====================================
 
-- ![](https://simplesqltutorials.com/wp-content/uploads/2021/05/if-else-decision-structures-featured-image.jpg)
+ ![](https://simplesqltutorials.com/wp-content/uploads/2021/05/if-else-decision-structures-featured-image.jpg)
 
 -   By Julien Barbier
 
