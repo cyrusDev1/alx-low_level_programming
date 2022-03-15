@@ -3,9 +3,8 @@
 /**
  * print_times_tables prints the n times table
  * starting with 0
- *
+ * @n: parameter
  * Return: no return
- *
  */
 
 void print_times_table(int n)
