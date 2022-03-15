@@ -4,8 +4,8 @@
 
 /**
  * _isalpha - check checks for alphabetic character
- *
- * Return 0 or 1
+ *@c: character to checked
+ * Return: return 0 or 1
  *
  */
 
