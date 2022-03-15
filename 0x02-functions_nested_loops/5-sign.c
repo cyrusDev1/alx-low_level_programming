@@ -3,10 +3,9 @@
 #include "main.h"
 
 /**
- * print_sign prints the sign of a number
- *
+ * print_sign - prints the sign of a number
+ * @n: contain the number to checked
  * Return: return 0 or 1 or - 1
- *
  */
 
 int print_sign(int n)
