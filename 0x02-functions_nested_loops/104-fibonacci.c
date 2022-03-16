@@ -16,7 +16,6 @@ int main(void)
 	for (i = 0; i < 98; i++)
 	{
 		follow = number1 + number2;
-		printf("%lu", follow);
 		number1 = number2;
 		number2 = follow;
 		if (i < 97)
