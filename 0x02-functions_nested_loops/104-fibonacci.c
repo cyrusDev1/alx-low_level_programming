@@ -8,7 +8,7 @@
 
 int main(void)
 {
-	unsigned long number1 = 0, number2 = 1, follow;
+	unsigned long number1 = 0, number2 = 1, follow = 0;
 	int i;
 
 	for (i = 0; i < 98; i++)
