@@ -21,7 +21,7 @@ int main(void)
 	a = a / 1000;
 	d = b % 1000;
 	b = b / 1000;
-	while (i <= 98)
+	while (i <= 99)
 	{
 		car = (c + d) / 1000;
 		follow = (c + d) - car * 1000;
@@ -34,7 +34,7 @@ int main(void)
 			printf("%lu%lu", next, follow);
 		else
 			printf("%lu0%lu", next, follow);
-		if (i != 98)
+		if (i != 99)
 			printf(", ");
 		i++;
 	}
