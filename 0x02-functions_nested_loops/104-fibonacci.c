@@ -7,14 +7,14 @@ int main(void)
 {
 	int i = 0;
 	unsigned long int a = 0, b = 1, next = 0;
-	unsigned long int c, d, follow,
+	unsigned long int c, d, follow, car;
 
 	while (i <= 91)
 	{
 		next = a + b;
 		a = b;
 		b = next;
-		printf("%lu", next);
+		printf("%lu, ", next);
 		i++;
 	}
 	c = a % 1000;
@@ -31,9 +31,11 @@ int main(void)
 		a = b;
 		b = next;
 		if (follow >= 100)
-			print("%lu%lu", next, follow);
+			printf("%lu%lu", next, follow);
 		else
 			printf("%lu0%lu", next, follow);
+		if (i != 98)
+			printf(", ");
 		i++;
 	}
 	putchar('\n');
