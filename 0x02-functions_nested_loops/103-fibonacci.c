@@ -15,9 +15,9 @@ int main(void)
 	{	follow = nbr1 + nbr2;
 		nbr1 = nbr2;
 		nbr2 = follow;
-		if ((follow % 2) == 0)
-			sum += follow;
+		if ((nbr1 % 2) == 0)
+			sum += nbr1;
 	}
 	printf("%ld\n", sum);
-	return (0);	
+	return (0);
 }
