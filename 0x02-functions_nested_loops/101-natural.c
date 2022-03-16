@@ -3,7 +3,7 @@
 #include "main.h"
 
 /**
- * main - list all the natural numbers below 10 
+ * main - list all the natural numbers below 10
  * that are multiples of 3 or 5
  *
  * Return: return 0
