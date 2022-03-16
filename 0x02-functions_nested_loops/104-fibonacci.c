@@ -7,16 +7,33 @@ int main(void)
 {
 	int i = 0;
 	unsigned long int a = 0, b = 1, next = 0;
+	unsigned long int c, d, follow,
 
-	while (i < 98)
+	while (i <= 91)
 	{
 		next = a + b;
 		a = b;
 		b = next;
 		printf("%lu", next);
-
-		if (i < 97)
-			printf(", ");
+		i++;
+	}
+	c = a % 1000;
+	a = a / 1000;
+	d = b % 1000;
+	b = b / 1000;
+	while (i <= 98)
+	{
+		car = (c + d) / 1000;
+		follow = (c + d) - car * 1000;
+		next = (a + b) + car;
+		c = d;
+		d = follow;
+		a = b;
+		b = next;
+		if (follow >= 100)
+			print("%lu%lu", next, follow);
+		else
+			printf("%lu0%lu", next, follow);
 		i++;
 	}
 	putchar('\n');
