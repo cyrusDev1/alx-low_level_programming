@@ -8,7 +8,9 @@
 
 int main(void)
 {
-	unsigned long number1 = 0, number2 = 1, follow;
+	unsigned long number1 = 0;
+	unsigned long number2 = 1;
+	unsigned long follow;
 	int i;
 
 	for (i = 0; i < 98; i++)
@@ -17,7 +19,7 @@ int main(void)
 		printf("%lu", follow);
 		number1 = number2;
 		number2 = follow;
-		if (i != 97)
+		if (i < 97)
 			printf("%lu, ", follow);
 		else
 			printf("%lu", follow);
