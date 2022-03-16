@@ -1,27 +1,31 @@
 #include <stdio.h>
-#include <stdlib.h>
 
 /**
- * main -  prints the first 98 Fibonacci numbers
- * Return: return 0
+ * main - Entry point, prints the first 50 fibonacci numbers
+ *
+ * Return: Always 0
  */
-
 int main(void)
 {
-	unsigned long number1 = 0;
-	unsigned long number2 = 1;
-	unsigned long follow;
-	int i;
+	int counter = 0;
+	unsigned long first = 0;
+	unsigned long second = 1;
+	unsigned long fib;
 
-	for (i = 0; i < 98; i++)
+	while (counter <= 97)
 	{
-		follow = number1 + number2;
-		number1 = number2;
-		number2 = follow;
-		if (i < 97)
-			printf("%lu, ", follow);
+		fib = first + second;
+		if (counter < 97)
+		{
+			printf("%lu, ", fib);
+		}
 		else
-			printf("%lu", follow);
+		{
+			printf("%lu", fib);
+		}
+		first = second;
+		second = fib;
+		counter++;
 	}
 	printf("\n");
 	return (0);
