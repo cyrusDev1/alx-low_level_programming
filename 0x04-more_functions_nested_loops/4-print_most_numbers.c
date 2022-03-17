@@ -2,7 +2,6 @@
 
 /**
  * print_most_numbers - print the digit without 4 and 2
- * @n: contain digit
  * Return: no return
  */
 
