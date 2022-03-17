@@ -3,7 +3,7 @@
 
 /**
  * main - print the largest prime factor of the number
- * @n: digit
+ * 
  * Return: return 0
  */
 
