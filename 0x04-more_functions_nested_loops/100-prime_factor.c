@@ -23,7 +23,7 @@ int main(void)
 			n = n / div;
 			if (n == 1)
 			{
-				printf("%d\n", max);
+				printf("%ld\n", max);
 				break;
 			}
 		}
