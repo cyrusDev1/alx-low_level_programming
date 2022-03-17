@@ -4,7 +4,7 @@
 /**
  * main - print the largest prime factor of the number
  *
- * Return: 0;
+ * Return: return 0;
  */
 
 int main(void)
@@ -16,7 +16,9 @@ int main(void)
 	while (n != 0)
 	{
 		if (n % div != 0)
+		{
 			div = div + 1;
+		}
 		else
 		{
 			max = n;
