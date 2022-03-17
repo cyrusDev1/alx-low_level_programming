@@ -2,8 +2,6 @@
 
 /**
  * more_numbers - print numbers 0 to 14
- * @i: iterative
- * @n: number to show
  * Return: no return
  */
 
