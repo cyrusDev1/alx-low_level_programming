@@ -3,7 +3,6 @@
 
 /**
  * main - print fizzbuzz program
- * @i: contain
  * Return: return 0
  */
 
