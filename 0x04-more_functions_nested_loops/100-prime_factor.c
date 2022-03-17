@@ -3,15 +3,14 @@
 
 /**
  * main - print the largest prime factor of the number
- *
- * Return: return 0;
+ * @n: digit
+ * Return: return 0
  */
 
 int main(void)
 {
-	long int n;
+	long int n = 612852475143;
 	long int div = 2, max;
-	n = 612852475143;
 
 	while (n != 0)
 	{
@@ -29,7 +28,6 @@ int main(void)
 				break;
 			}
 		}
-	
 	}
 	return (0);
 }
