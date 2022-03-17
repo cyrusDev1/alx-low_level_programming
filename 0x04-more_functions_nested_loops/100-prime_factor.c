@@ -8,8 +8,7 @@
 
 int main(void)
 {
-	long int n = 612852475143;
-	long int div = 2, max;
+	long int n = 612852475143, div = 2, max;
 
 	while (n != 0)
 	{
