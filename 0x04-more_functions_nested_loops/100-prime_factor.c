@@ -11,6 +11,7 @@ int main(void)
 {
 	long int n;
 	long int div = 2, max;
+	n = 612852475143;
 
 	while (n != 0)
 	{
