@@ -11,10 +11,12 @@
 void puts_half(char *str)
 {
 	int n = strlen(str) / 2;
-	int i = 0;
+	int i;
 
 	if (strlen(str) % 2 != 0)
 		n = (strlen(str) / 2) - 1;
+	i = n;
+
 	while (str[i] != '\0')
 	{
 		_putchar(*(str + n));
