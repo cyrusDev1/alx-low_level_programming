@@ -21,6 +21,6 @@ int main(void)
 		n += c;
 		putchar(c);
 	}
-	putchar(2772 - sum);
+	putchar(2772 - n);
 	return (0);
 }
