@@ -11,7 +11,7 @@ char *leet(char *s)
 	char *english = "aAeEoOtTlL";
 	char *leet = "4433007711";
 	int i = 0, j = 0;
-	
+
 	while (s[i])
 	{
 		for (j = 0; j < 10; j++)
