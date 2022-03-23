@@ -10,7 +10,7 @@ char *rot13(char *str)
 {
 	char first_alpha[52] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char second_alpha[52] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
-	int i = 0;
+	int i;
 	int j;
 
 	for (i = 0; str[i] != '\0'; i++)
