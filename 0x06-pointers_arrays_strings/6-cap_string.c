@@ -14,6 +14,8 @@ char *cap_string(char *str)
 
 	while (str[i])
 	{
+		if (i == 0 && str[i] >= 'a' && str[j] <= 'z')
+			str[i] -= 32;
 		for (j = 0; j < 13; j++)
 		{
 			if (str[i] == separate[j])
