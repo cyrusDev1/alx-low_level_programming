@@ -37,7 +37,7 @@ void print_buffer(char *b, int size)
 					break;
 				if (b[j + 1] <= 31 || b[j + 1] >= '~')
 					b[j + i] = '.';
-				putchar(b[j + 1]);
+				putchar(b[j + i]);
 				j++;
 			}
 			printf("\n");
