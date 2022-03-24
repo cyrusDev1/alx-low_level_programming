@@ -4,7 +4,7 @@
  * print_buffer - prints buffer of a char string
  * @b: buffer to print
  * @size: size of buffer
- * Return: no return
+ * Return: nothing
  */
 
 void print_buffer(char *b, int size)
@@ -24,7 +24,9 @@ void print_buffer(char *b, int size)
 				if (j % 2 == 0 && j != 0)
 					printf(" ");
 				if ((j + i) > size - 1)
-					printf(" ");
+				{
+					printf("  ");
+				}
 				else
 					printf("%.2x", b[i + j]);
 				j++;
@@ -33,9 +35,9 @@ void print_buffer(char *b, int size)
 			j = 0;
 			while (j < 10)
 			{
-				if ((j + 1) > size - 1)
+				if ((j + i) > size - 1)
 					break;
-				if (b[j + 1] <= 31 || b[j + 1] >= '~')
+				if (b[j + i] <= 31 || b[j + 1] >= '~')
 					b[j + i] = '.';
 				putchar(b[j + i]);
 				j++;
