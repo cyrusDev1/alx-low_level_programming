@@ -23,7 +23,7 @@ void print_buffer(char *b, int size)
 			{
 				if (j % 2 == 0 && j != 0)
 					printf(" ");
-				if ((j + 1) > size - 1)
+				if ((j + i) > size - 1)
 					printf(" ");
 				else
 					printf("%.2x", b[i + j]);
