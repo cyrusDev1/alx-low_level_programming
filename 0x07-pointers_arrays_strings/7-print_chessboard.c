@@ -9,15 +9,15 @@
 
 void print_chessboard(char (*a)[8])
 {
-	int i = 0, j = 0;
+	int i, j;
 	int len = (sizeof(a)/sizeof(char));
 
 	for (i = 0; i < len; i++)
 	{
 		for (j = 0; j < 8; j++)
 		{
-			printf("%c", a[i][j]);
+			_putchar(a[i][j]);
 		}
-		printf("\n");
+		_putchar("\n");
 	}
 }
