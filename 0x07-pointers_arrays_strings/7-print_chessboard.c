@@ -2,14 +2,15 @@
 #include <stdio.h>
 
 /**
- *
+ * print_chessboard - prints chessboard
+ * @a: array
  * Return: no return
  */
 
 void print_chessboard(char (*a)[8])
 {
 	int i = 0, j = 0;
-	int len = sizeof(a)/sizeof(char);
+	int len = (sizeof(a)/sizeof(char));
 
 	for (i = 0; i < len; i++)
 	{
