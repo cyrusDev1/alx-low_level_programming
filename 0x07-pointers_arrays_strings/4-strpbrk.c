@@ -24,6 +24,7 @@ char *_strpbrk(char *s, char *accept)
  * _strchr - locates a character in a string
  * @s: first parameter
  * @c: second parameter
+ *
  * Return: return c or NULL
  */
 
