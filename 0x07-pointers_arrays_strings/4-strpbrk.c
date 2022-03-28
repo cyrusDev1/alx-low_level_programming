@@ -20,7 +20,6 @@ char *_strpbrk(char *s, char *accept)
 	return (NULL);
 }
 
-
 /**
  * _strchr - locates a char in a string
  * @s: string to be searched
