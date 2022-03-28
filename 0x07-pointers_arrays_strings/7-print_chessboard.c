@@ -1,9 +1,9 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * print_chessboard - printss the chessboard
+ * print_chessboard - prints the chessboard
  * @a: param
+ *
  * Return: no return
  */
 
