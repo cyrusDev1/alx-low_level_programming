@@ -2,7 +2,8 @@
 #include <stddef.h>
 
 /**
- * _strpbrk - searches a string for any of a set of bytes
+ * _strpbrk - searches a string for any
+ * of a set of bytes
  * @s: first param
  * @accept: second param
  * Return: returns a pointer to the byte in s
