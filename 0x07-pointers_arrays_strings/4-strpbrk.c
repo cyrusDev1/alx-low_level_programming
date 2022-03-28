@@ -20,12 +20,13 @@ char *_strpbrk(char *s, char *accept)
 	return (NULL);
 }
 
+
 /**
- * _strchr - locates a character in a string
- * @s: first parameter
- * @c: second parameter
+ * _strchr - locates a char in a string
+ * @s: string to be searched
+ * @c: char to be checked
  *
- * Return: return c or NULL
+ * Return: pointer to the first occurence of c in s
  */
 
 char *_strchr(char *s, char c)
@@ -34,7 +35,7 @@ char *_strchr(char *s, char c)
 
 	for (; s[i] != '\0'; i++)
 	{
-		if(s[i] == c)
+		if (s[i] == c)
 			return (s + i);
 	}
 	return (NULL);
