@@ -31,7 +31,7 @@ int _sqrt(int num, int root)
 {
 	if ((root * root) == num)
 		return (root);
-	if(root == num / 2)
+	if (root == num / 2)
 		return (-1);
 	return (_sqrt(num, root + 1));
 }
