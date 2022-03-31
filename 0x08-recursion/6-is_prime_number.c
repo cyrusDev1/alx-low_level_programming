@@ -22,7 +22,7 @@ int is_prime_number(int n)
  * @num: the number to checked
  * @div: the divisor
  * Return: return 0 if number is divisible
- * 	   return -1 isif is not divisible
+ * return -1 isif is not divisible
  */
 
 int is_divis(int num, int div)
