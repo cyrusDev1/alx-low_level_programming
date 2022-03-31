@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * willdcmp - compares two srtings
+ * wildcmp - compares two srtings
  * @s1: string one
  * @s2: string two
  * Return: return 1 or 0
