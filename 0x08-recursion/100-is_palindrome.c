@@ -23,6 +23,7 @@ int is_palindrome(char *s)
  * @s: string to checked
  * @len: string length
  * @i: iterator
+ * Return: 1 or 0
  */
 
 int check(char *s, int len, int i)
