@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * main : print the number
+ * main - print the number
  * @argc: number of arg
  * @argv: array
  * Return: 0
@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 	while (cents > 0)
 	{
 		sum++;
-		if ((cents -25) >= 0)
+		if ((cents - 25) >= 0)
 		{
 			cents -= 25;
 			continue;
