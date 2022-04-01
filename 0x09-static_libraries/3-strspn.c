@@ -11,29 +11,22 @@
 unsigned int _strspn(char *s, char *accept)
 {
 	unsigned int len = 0;
+	int i;
 
-	while (*s && _strchr(accept, *s++) != NULL)
+	while (*s)
 	{
-		len++;
+		for (i = 0; accept[i]; i++)
+		{
+			if (*s == accept[i])
+			{
+				len++;
+				break;
+			}else if (accept[i + 1] == '\0')
+			{
+				return (len);
+			}
+		}
+		s++;
 	}
 	return (len);
-}
-
-/**
- * _strchr - locates a character in a string
- * @s: first parameter
- * @c: second parameter
- * Return: return c or NULL
- */
-
-char *_strchr(char *s, char c)
-{
-	int i = 0;
-
-	for (; s[i] != '\0'; i++)
-	{
-		if (s[i] == c)
-			return (s + i);
-	}
-	return (NULL);
 }

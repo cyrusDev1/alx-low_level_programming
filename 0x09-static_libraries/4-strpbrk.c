@@ -11,31 +11,16 @@
 
 char *_strpbrk(char *s, char *accept)
 {
+	int i;
+
 	while (*s)
 	{
-		if (_strchr(accept, *s) != NULL)
-			return (s);
+		for (i = 0; accept[i]; i++)
+		{
+			if (*s == accept[i])
+				return (s);
+		}
 		s++;
 	}
-	return (NULL);
-}
-
-/**
- * _strchr - locates a char in a string
- * @s: string to be searched
- * @c: char to be checked
- *
- * Return: pointer to the first occurence of c in s
- */
-
-char *_strchr(char *s, char c)
-{
-	int i = 0;
-
-	for (; s[i] != '\0'; i++)
-	{
-		if (s[i] == c)
-			return (s + i);
-	}
-	return (NULL);
+	return ('\0');
 }
