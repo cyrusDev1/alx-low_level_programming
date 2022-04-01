@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
 	int cents = 0;
 	int sum = 0, nb1, nb2, nb10, nb25, nb5;
 
-	if (argc < 2)
+	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
