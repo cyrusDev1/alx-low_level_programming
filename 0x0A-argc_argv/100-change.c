@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * main - print the number
+ * main : print the number
  * @argc: number of arg
  * @argv: array
  * Return: 0
