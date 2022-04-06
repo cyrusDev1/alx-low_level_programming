@@ -15,7 +15,8 @@ int count(char *s)
 		if (s[i] == ' ')
 		{
 			check = 0;
-		}else if(check == 0)
+		}
+		else if (check == 0)
 		{
 			check = 1;
 			w++;
@@ -44,7 +45,7 @@ char **strtow(char *str)
 	if (word == NULL || words == 0)
 		return (NULL);
 
-	for (i = 0; str[i]; i++)
+	for (i = 0; i <= len; i++)
 	{
 		if (str[i] == ' ' || str[i] == '\0')
 		{
