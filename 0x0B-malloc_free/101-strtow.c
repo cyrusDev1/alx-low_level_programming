@@ -41,7 +41,7 @@ char **strtow(char *str)
 		len++;
 	}
 	words = count(str);
-	word = (char **) malloc(sizeof(char *) * (len + 1));
+	word = (char **) malloc(sizeof(char *) * (words + 1));
 	if (word == NULL || words == 0)
 		return (NULL);
 
