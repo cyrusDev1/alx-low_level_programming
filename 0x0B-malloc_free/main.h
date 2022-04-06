@@ -9,5 +9,6 @@ char *str_concat(char *s1, char *s2);
 int **alloc_grid(int width, int height);
 void free_grid(int **frid, int height);
 char *argstostr(int ac, char **av);
+char **strtow(char *str);
 
 #endif /* MAIN_H */
