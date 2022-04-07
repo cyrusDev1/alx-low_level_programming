@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * _calloc - allocates memory for an array
+ * _calloc - allocates memory for an array, using malloc
  * @nmemb: number elements of array
  * @size: size of array
  * Return: return new memory or NULL
