@@ -6,14 +6,13 @@
  * @ptr: pointer
  * @old_size: old size
  * @new_size: new size
- * Return: no return
+ * Return: return pointer or null
  */
 
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-	char *real;
+	char *real, *ptr1;
 	unsigned int i = 0;
-	char *ptr1;
 
 	if (new_size == old_size)
 		return (ptr);
@@ -24,7 +23,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	}
 	if (ptr == NULL)
 		return (malloc(new_size));
-	real = malloc(new_size * sizeof *real);
+	real = malloc(new_size);
 	if (real == NULL)
 		return (NULL);
 	ptr1 = ptr;
