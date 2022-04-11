@@ -7,8 +7,8 @@
  * new_dog - creates a new dog
  * @name: firts param
  * @float: second param
- * @owner: third param
- * Return: null or
+ * owner: third param
+ * Return: null or dog
  */
 
 dog_t *new_dog(char *name, float age, char *owner)
