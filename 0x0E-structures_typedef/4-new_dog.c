@@ -6,8 +6,8 @@
 /**
  * new_dog - creates a new dog
  * @name: firts param
- * @float: second param
- * owner: third param
+ * @age: second param
+ * @owner: third param
  * Return: null or dog
  */
 
