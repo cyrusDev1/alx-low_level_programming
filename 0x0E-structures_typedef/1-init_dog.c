@@ -5,7 +5,7 @@
  * init_dog - initialize a variable of type struct dog
  * @d: first param
  * @name: second param
- * age: third param
+ * @age: third param
  * @owner: four param
  * Return: no return
  */
