@@ -2,13 +2,11 @@
 
 /**
  * main - print the file name
- * @argc: number
- * @argv: array
  * Return: 0
  */
 
-int main(int argc, char *argv[])
+int main()
 {
 	printf("%s\n", __FILE__);
-	return (0);
+	return (0);       
 }
