@@ -11,9 +11,6 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	unsigned int j;
 	va_list ap;
 
-	if (n == 0)
-		return;
-
 	va_start(ap, n);
 	for (j = 0; j < n; j++)
 	{
@@ -30,6 +27,6 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 			printf("%s%d", separator, va_arg(ap, int));
 		}
 	}
-	printf("\n");
 	va_end(ap);
+	printf("\n");
 }
