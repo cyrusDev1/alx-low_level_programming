@@ -16,20 +16,20 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		return;
 
 	va_start(ap, n);
-	for (j = n; j; j--)
+	for (j = 0; j < n; j++)
 	{
 		i = va_arg(ap, int);
 		if (separator == NULL)
 		{
 			printf("%d", i);
 		}
-		else if (separator != NULL && j == 1)
+		else if (separator != NULL && j == 0)
 		{
 			printf("%d", i);
 		}
 		else
-		{	
-			printf("%d%s", i, separator);
+		{
+			printf("%s%d", separator, i);
 		}
 	}
 	printf("\n");
