@@ -6,6 +6,7 @@
  * @n: second param
  * Return: no return
  */
+
 void print_strings(const char *separator, const unsigned int n, ...)
 {
 	unsigned int j;
