@@ -2,8 +2,7 @@
 
 /**
  * start - prints a string
- *
- * Return: Always 0.
+ * Return: nothing
  */
 
 void start(void)
