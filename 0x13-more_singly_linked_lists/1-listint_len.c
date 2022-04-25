@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * listint_n - number of elements
+ * listint_len - number of elements
  * @h: list to count
  * Return: return number of elements
  */
