@@ -42,6 +42,5 @@ size_t print_listint_safe(const listint_t *head)
 {
 	if (head == NULL)
 		return (0);
-
 	return (check_print(head, NULL));
 }
