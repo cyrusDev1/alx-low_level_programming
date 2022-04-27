@@ -1,30 +1,47 @@
 #include "lists.h"
 
 /**
- * print_listint_safe - prints a linked list
- * @head: list to printed
- * Return: return number of nodes
+ * _check_and_print - Check the list and print
+ * @head: of newlist to check
+ * @prev: node on list to check
+ *
+ * Return: number of nodes
+ */
+
+int check_print(const listint_t *head, listint_sf *prev)
+{
+	listint_sf node, *tmp;
+
+	if (head->next == NULL)
+	{
+		printf("[%p] %d\n", (void *)head, head->n);
+		return (1);
+	}
+
+	node.next = prev;
+	node.data = head;
+	tmp = node.next;
+	while (tmp != NULL && tmp->data != head)
+		tmp = tmp->next;
+	if (tmp != NULL)
+	{
+		printf("-> [%p] %d\n", (void *)head, head->n);
+		return (0);
+	}
+	printf("[%p] %d\n", (void *)head, head->n);
+	return (1 + check_print(head->next, &node));
+}
+
+/**
+ * print_listint_safe - Print a linkint_t with user error
+ * @head: head of the string
+ * Return: number of nodes in list
  */
 
 size_t print_listint_safe(const listint_t *head)
 {
-	size_t n = 0;
-	long int cursor;
+	if (head == NULL)
+		return (0);
 
-	while (head)
-	{
-		cursor = head - head->next;
-		printf("[%p] %d\n", (void *)head, head->n);
-		if (cursor > 0)
-		{
-			head = head->next;
-		}
-		else
-		{
-			printf("-> [%p] %d\n", (void *)head->next, head->next->n);
-			break;
-		}
-		n++;
-	}
-	return (n);
+	return (check_print(head, NULL));
 }
