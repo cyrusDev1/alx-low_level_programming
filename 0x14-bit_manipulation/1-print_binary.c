@@ -2,6 +2,7 @@
 
 /**
  * print_binary - prints the binary representation
+ * @n: number
  * Return: return nothing
  */
 
