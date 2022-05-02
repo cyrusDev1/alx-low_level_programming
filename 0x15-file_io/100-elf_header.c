@@ -1,7 +1,8 @@
 #include "main.h"
 
 /**
- * main - displays the information contained in the ELF header at the start of an ELF file.
+ * main - displays the information contained in the ELF header at
+ * the start of an ELF file.
  * @argc: number of arguments
  * @argv: array
  * Return: 0
@@ -36,6 +37,7 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	}
 
 	check_elf(header->e_ident);
+	print_magic(header->e_ident);
 	return (0);
 }
 
@@ -74,5 +76,26 @@ void close_elf(int elf)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", elf);
 		exit(98);
+	}
+}
+
+/**
+ * print_magic - prints the magic number
+ * @e_ident: array contain the file magic number
+ * Return: no return
+ */
+
+void print_magic(unsigned char *e_ident)
+{
+	int i;
+
+	printf("  Magic:   ");
+	for (i = 0; i < EI_NIDENT; i++)
+	{
+		printf("%02x", e_ident[i]);
+		if (i == EI_NIDENT - 1)
+			printf("\n");
+		else
+			printf(" ");
 	}
 }
