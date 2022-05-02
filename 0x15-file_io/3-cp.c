@@ -3,7 +3,7 @@
 /**
  * main - copies the content of a file to another file
  * @argc: number of arg
- * @argv: arr of arguments
+ * @argv: array of arguments
  * Return: return 0
  */
 
