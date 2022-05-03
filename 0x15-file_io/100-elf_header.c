@@ -45,6 +45,8 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	print_abiversion(header->e_ident);
 	print_type(header->e_type, header->e_ident);
 	print_entry(header->e_entry, header->e_ident);
+	free(header);
+	close_elf(fd_open);
 	return (0);
 }
 
