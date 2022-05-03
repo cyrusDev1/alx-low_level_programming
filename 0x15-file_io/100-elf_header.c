@@ -41,6 +41,8 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	print_class(header->e_ident);
 	print_data(header->e_ident);
 	print_version(header->e_ident);
+	print_osabi(header->e_ident);
+	print_abiversion(header->e_ident);
 	return (0);
 }
 
@@ -174,4 +176,65 @@ void print_version(unsigned char *e_ident)
 			printf("(invalid)\n");
 			break;
 	}
+}
+
+/**
+ * print_osabi - identifies the operating system and
+ * ABI to which the object is targeted
+ * @e_ident: array of bytes specifies how to interpret
+ * the file
+ * Return: return nothing
+ */
+
+void print_osabi(unsigned char *e_ident)
+{
+	printf("  OS/ABI:                            ");
+	switch (e_ident[EI_OSABI])
+	{
+		case ELFOSABI_NONE:
+			printf("UNIX - System V\n");
+			break;
+		case ELFOSABI_HPUX:
+			printf("UNIX - HP-UX\n");
+			break;
+		case ELFOSABI_NETBSD:
+			printf("UNIX - NetBSD\n");
+			break;
+		case ELFOSABI_LINUX:
+			printf("UNIX - Linux\n");
+			break;
+		case ELFOSABI_SOLARIS:
+			printf("UNIX - Solaris\n");
+			break;
+		case ELFOSABI_IRIX:
+			printf("UNIX - IRIX\n");
+			break;
+		case ELFOSABI_FREEBSD:
+			printf("UNIX - FreBSD\n");
+			break;
+		case ELFOSABI_ARM:
+			printf("ARM\n");
+			break;
+		case ELFOSABI_STANDALONE:
+			printf("Standalone App\n");
+			break;
+		case ELFOSABI_TRU64:
+			printf("UNIX - TRU64\n");
+			break;
+		default:
+			printf("<unknown %x>\n", e_ident[EI_OSABI]);
+	}
+}
+
+/**
+ * abiversion - identifies the version of the ABI to
+ * which the object is targeted
+ * @e_ident:  array of bytes specifies how to interpret
+ * the file
+ * Return: return nothing
+ */
+
+void print_abiversion(unsigned char *e_ident)
+{
+	printf("  ABI Version:                       %d\n", e_ident[EI_ABIVERSION]);
 }
