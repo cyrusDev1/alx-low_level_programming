@@ -1,10 +1,11 @@
+#include <elf.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
 #include <fcntl.h>
 #include <sys/types.h>
 #include <sys/stat.h>
-#include <elf.h>
+
 
 void check_elf(unsigned char *e_ident);
 void close_elf(int elf);
