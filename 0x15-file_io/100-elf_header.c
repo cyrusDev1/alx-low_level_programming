@@ -37,6 +37,7 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	}
 
 	check_elf(header->e_ident);
+	printf("ELF Header:\n");
 	print_magic(header->e_ident);
 	print_class(header->e_ident);
 	print_data(header->e_ident);
@@ -58,18 +59,18 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 
 void check_elf(unsigned char *e_ident)
 {
+	int i;
 
-	if (e_ident[0] == 127 &&
-		e_ident[1] == 'E' &&
-		e_ident[2] == 'L' &&
-		e_ident[3] == 'F')
+	for (i = 0; i < 4; i++)
 	{
-		printf("ELF Header:\n");
-	}
-	else
-	{
-		dprintf(STDERR_FILENO, "Error: Not an ELF file\n");
-		exit(98);
+		if (e_ident[i] != 127 &&
+			e_ident[i] != 'E' &&
+			e_ident[i] != 'L' &&
+			e_ident[i] != 'F')
+		{
+			dprintf(STDERR_FILENO, "Error: Not an ELF file\n");
+			exit(98);
+		}
 	}
 }
 
