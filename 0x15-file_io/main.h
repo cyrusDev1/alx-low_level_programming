@@ -22,5 +22,7 @@ void print_version(unsigned char *e_ident);
 void print_osabi(unsigned char *e_ident);
 void print_version(unsigned char *e_ident);
 void print_abiversion(unsigned char *e_ident);
+void print_type(unsigned int e_type, unsigned char *e_ident);
+void print_entry(unsigned long int e_entry, unsigned char *e_ident);
 
 #endif
