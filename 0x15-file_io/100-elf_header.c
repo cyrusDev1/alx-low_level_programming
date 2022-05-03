@@ -40,6 +40,7 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	print_magic(header->e_ident);
 	print_class(header->e_ident);
 	print_data(header->e_ident);
+	print_version(header->e_ident);
 	return (0);
 }
 
@@ -138,7 +139,7 @@ void print_class(unsigned char *e_ident)
 void print_data(unsigned char *e_ident)
 {
 	printf("  Data:                              ");
-	switch(e_ident[EI_DATA])
+	switch (e_ident[EI_DATA])
 	{
 		case ELFDATANONE:
 			printf("Unknow data format\n");
@@ -151,5 +152,26 @@ void print_data(unsigned char *e_ident)
 			break;
 		default:
 			printf("<unknown: %x>\n", e_ident[EI_DATA]);
+	}
+}
+
+/**
+ * print_version - print the version number of the file
+ * @e_ident: array of bytes specifies how to interpret
+ * the file
+ * Return: return nothing
+ */
+
+void print_version(unsigned char *e_ident)
+{
+	printf("  Version:                           %d ", e_ident[EI_VERSION]);
+	switch (e_ident[EI_VERSION])
+	{
+		case EV_CURRENT:
+			printf("(current)\n");
+			break;
+		case EV_NONE:
+			printf("(invalid)\n");
+			break;
 	}
 }
