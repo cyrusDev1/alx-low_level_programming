@@ -38,6 +38,7 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 
 	check_elf(header->e_ident);
 	print_magic(header->e_ident);
+	print_class(header->e_ident);
 	return (0);
 }
 
@@ -97,5 +98,30 @@ void print_magic(unsigned char *e_ident)
 			printf("\n");
 		else
 			printf(" ");
+	}
+}
+
+/**
+ * print_class - prints the class of file
+ * @e_ident: array of bytes specifies how to interpret
+ * Return: no return
+ */
+
+void print_class(unsigned char *e_ident)
+{
+	printf("  Class:                             ");
+	switch (e_ident[EI_CLASS])
+	{
+		case ELFCLASSNONE:
+			printf("none\n");
+			break;
+		case ELFCLASS32:
+			printf("ELF32\n");
+			break;
+		case ELFCLASS64:
+			printf("ELF64\n");
+			break;
+		default:
+			printf("<unknown: %x>\n", e_ident[EI_CLASS]);
 	}
 }
