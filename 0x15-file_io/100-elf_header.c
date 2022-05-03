@@ -49,9 +49,10 @@ void check_elf(unsigned char *e_ident)
 
 void close_elf(int elf)
 {
-	if (close(elf) < 0)
+	if (close(elf) == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", elf);
+		dprintf(STDERR_FILENO,
+			 "Error: Can't close fd %d\n", elf);
 		exit(98);
 	}
 }
@@ -125,7 +126,7 @@ void print_data(unsigned char *e_ident)
 			printf("Two_s complement, big-endian\n");
 			break;
 		default:
-			printf("<unknown: %x>\n", e_ident[EI_DATA]);
+			printf("<unknown: %x>\n", e_ident[EI_CLASS]);
 	}
 }
 
@@ -144,8 +145,8 @@ void print_version(unsigned char *e_ident)
 		case EV_CURRENT:
 			printf("(current)\n");
 			break;
-		case EV_NONE:
-			printf("(invalid)\n");
+		default:
+			printf("\n");
 			break;
 	}
 }
@@ -194,7 +195,7 @@ void print_osabi(unsigned char *e_ident)
 			printf("UNIX - TRU64\n");
 			break;
 		default:
-			printf("<unknown %x>\n", e_ident[EI_OSABI]);
+			printf("<unknown: %x>\n", e_ident[EI_OSABI]);
 	}
 }
 
@@ -286,7 +287,7 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	Elf64_Ehdr *header;
 
 	fd_open = open(argv[1], O_RDONLY);
-	if (fd_open < 0)
+	if (fd_open == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read file %s\n", argv[1]);
 		exit(98);
@@ -300,7 +301,7 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	}
 
 	fd_read = read(fd_open, header, sizeof(Elf64_Ehdr));
-	if (fd_read < 0)
+	if (fd_read == -1)
 	{
 		free(header);
 		close_elf(fd_open);
