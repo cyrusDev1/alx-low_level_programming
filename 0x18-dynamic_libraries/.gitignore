@@ -2,3 +2,4 @@
 *.o
 len
 liball.so
+*.py
