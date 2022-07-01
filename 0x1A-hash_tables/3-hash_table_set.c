@@ -15,11 +15,11 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *node = NULL;
 	unsigned int i = 0;
 
-	if (!ht || strcmp(key, "") == 0 || !key || !value )
+	if (!ht || strcmp(key, "") == 0 || !key || !value)
 		return (0);
-	
+
 	index = key_index((const unsigned char *)key, ht->size);
-	for (i = 0; ht->array[i] != NULL; i++)
+	for (i = index; ht->array[i] != NULL; i++)
 	{
 		if (!strcmp(ht->array[i]->key, key))
 		{
