@@ -1,0 +1,5 @@
+*.out
+school
+*.c
+*.o
+*.h
